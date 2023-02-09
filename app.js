@@ -113,7 +113,7 @@ app.get("/view/:id", (req, res) => {
         } else {
 
             console.log(Question)
-            // console.log(Replies)
+
             res.render("question", { Question: Question })
 
 
