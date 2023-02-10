@@ -7,7 +7,7 @@ const mongoose = require('mongoose');
 const { post } = require('request');
 
 mongoose.connect('mongodb://127.0.0.1:27017/Project_exh');
-// mongoose.connect('mongodb://localhost:27017/question', { useNewUrlParser: true });
+
 const app = express()
 const port = 3000
 app.set('view engine', 'ejs');
@@ -46,7 +46,7 @@ app.get('/', (req, res) => {
             console.log(err)
 
         } else {
-            // console.log(questions)
+
             res.render("home", {
                 questions: questions
             });
@@ -64,7 +64,7 @@ app.get('/view', (req, res) => {
             console.log(err)
 
         } else {
-            // console.log(questions)
+
             res.render("home", {
                 questions: questions,
             });
